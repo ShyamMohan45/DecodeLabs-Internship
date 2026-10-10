@@ -1,10 +1,15 @@
 # NOVA — Premium E-Commerce Shopping Platform
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-success?style=for-the-badge&logo=vercel)](https://decodelabsinternship-five.vercel.app/)
+
+> 🌐 **Live Production Deployment:** [https://decodelabsinternship-five.vercel.app/](https://decodelabsinternship-five.vercel.app/)
+
 A high-end, responsive online shopping experience built strictly with **HTML5**, **CSS3**, and **Vanilla JavaScript (ES6+)**.
 
 Inspired by the aesthetic purity and editorial design standards of Apple, Nike, and Zara, **NOVA** delivers modern minimalism, architectural layouts, smooth micro-interactions, and genuine client-side e-commerce functionality with **zero dependencies or frameworks**.
 
 ---
+
 
 ## 💎 Design Philosophy & Highlights
 
