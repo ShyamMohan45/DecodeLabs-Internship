@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOVA — Premium E-Commerce Shopping Platform</title>
+  <meta name="description" content="Discover refined essentials across fashion, high-fidelity audio, timepieces, and lifestyle artifacts. Minimalist luxury engineered for modern living." />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <div class="announcement-bar__text">
+        <span>✨</span>
+        <span>Complimentary Express Shipping on all orders above <strong>₹5,000</strong></span>
+      </div>
+      <div class="announcement-bar__links">
+        <a href="shop.html?badge=sale">Mid-Season Sale: Up to 30% Off</a>
+        <a href="#newsletter">Join NOVA Collective</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="index.html" class="header-logo" aria-label="NOVA Home">
+        NOVA<span class="header-logo__symbol"></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link is-active">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="shop.html?category=fashion" class="nav-link">Fashion</a>
+        <a href="shop.html?category=electronics" class="nav-link">Electronics</a>
+        <a href="shop.html?category=accessories" class="nav-link">Accessories</a>
+        <a href="shop.html?badge=new" class="nav-link">New Arrivals</a>
+      </nav>
+
+      <!-- Action Icons -->
+      <div class="header-actions">
+        <!-- Search Trigger -->
+        <button type="button" class="header-action-btn header-search-trigger" aria-label="Search catalog" title="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+
+        <!-- Wishlist -->
+        <a href="wishlist.html" class="header-action-btn" aria-label="View Wishlist" title="Saved Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <span class="badge-counter header-wishlist-count">0</span>
+        </a>
+
+        <!-- Shopping Cart -->
+        <a href="cart.html" class="header-action-btn" aria-label="View Shopping Cart" title="Shopping Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          <span class="badge-counter header-cart-count">0</span>
+        </a>
+
+        <!-- User Account -->
+        <a href="account.html" class="header-action-btn header-account-link" aria-label="Account Dashboard" title="My Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="header-action-btn mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-backdrop">
+    <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="header-logo">NOVA<span class="header-logo__symbol"></span></a>
+        <button type="button" class="mobile-drawer-close" aria-label="Close Navigation">&times;</button>
+      </div>
+
+      <nav class="mobile-drawer-nav">
+        <a href="index.html" class="mobile-nav-link">Home <span>&rarr;</span></a>
+        <a href="shop.html" class="mobile-nav-link">All Products <span>&rarr;</span></a>
+        <a href="shop.html?category=fashion" class="mobile-nav-link">Fashion <span>&rarr;</span></a>
+        <a href="shop.html?category=electronics" class="mobile-nav-link">Electronics <span>&rarr;</span></a>
+        <a href="shop.html?category=accessories" class="mobile-nav-link">Accessories <span>&rarr;</span></a>
+        <a href="shop.html?category=lifestyle" class="mobile-nav-link">Lifestyle <span>&rarr;</span></a>
+        <a href="shop.html?badge=new" class="mobile-nav-link">New Arrivals <span>&rarr;</span></a>
+      </nav>
+
+      <div class="mobile-drawer-footer">
+        <a href="account.html" class="btn btn--secondary btn--block">My Account & Orders</a>
+        <a href="cart.html" class="btn btn--primary btn--block">View Cart</a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Search Modal Overlay -->
+  <div class="search-modal-backdrop" role="dialog" aria-modal="true" aria-label="Quick Product Search">
+    <div class="search-modal-container">
+      <div class="search-bar-header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="search" class="search-bar-input" placeholder="Search cashmere, headphones, watch, ceramics..." aria-label="Search catalog" autocomplete="off" />
+        <button type="button" class="search-modal-close" aria-label="Close search">&times;</button>
+      </div>
+      <div class="search-results-list"></div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="hero-tag">
+            <span>● Autumn / Winter 2026</span>
+          </div>
+          <h1 class="hero-title">
+            Discover Your <span>Next Favorite.</span>
+          </h1>
+          <p class="hero-desc">
+            An uncompromising study in architectural tailoring, pure acoustic fidelity, and tactile heirloom lifestyle objects. Designed for the discerning collector.
+          </p>
+          <div class="hero-actions">
+            <a href="shop.html" class="btn btn--primary btn--lg">Shop Collection &rarr;</a>
+            <a href="shop.html?badge=new" class="btn btn--secondary btn--lg">Explore New Arrivals</a>
+          </div>
+        </div>
+
+        <div class="hero-media reveal reveal--delay-1">
+          <div class="hero-image-wrap">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=85" 
+                 alt="NOVA Editorial High Fashion Collection" 
+                 class="hero-image" />
+          </div>
+
+          <!-- Floating Micro Card -->
+          <div class="hero-floating-card">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=200&q=80" alt="Nova Studio Wireless Headphones" />
+            <div class="hero-floating-info">
+              <h5>Studio ANC Headphones</h5>
+              <p>₹18,999 &bull; Flagship Audio</p>
+            </div>
+            <a href="product.html?id=nova-201" class="btn btn--primary btn--sm" style="padding: 0.4rem 0.75rem; font-size: 0.75rem;">View</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP BY CATEGORY -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <span class="section-tag">Curated Departments</span>
+            <h2 class="section-title">Shop by Category</h2>
+          </div>
+          <a href="shop.html" class="btn btn--secondary btn--sm">View All Departments &rarr;</a>
+        </div>
+
+        <div class="category-grid">
+          <!-- Category 1: Fashion -->
+          <a href="shop.html?category=fashion" class="category-card reveal">
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=800&q=80" alt="Fashion Department" class="category-card__image" loading="lazy" />
+            <div class="category-card__overlay">
+              <h3 class="category-card__title">Fashion</h3>
+              <span class="category-card__link-text">Explore Wardrobe &rarr;</span>
+            </div>
+          </a>
+
+          <!-- Category 2: Electronics -->
+          <a href="shop.html?category=electronics" class="category-card reveal reveal--delay-1">
+            <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80" alt="Electronics Department" class="category-card__image" loading="lazy" />
+            <div class="category-card__overlay">
+              <h3 class="category-card__title">Electronics</h3>
+              <span class="category-card__link-text">Explore Audio & Tech &rarr;</span>
+            </div>
+          </a>
+
+          <!-- Category 3: Accessories -->
+          <a href="shop.html?category=accessories" class="category-card reveal reveal--delay-2">
+            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80" alt="Accessories Department" class="category-card__image" loading="lazy" />
+            <div class="category-card__overlay">
+              <h3 class="category-card__title">Accessories</h3>
+              <span class="category-card__link-text">Explore Leather & Horology &rarr;</span>
+            </div>
+          </a>
+
+          <!-- Category 4: Lifestyle -->
+          <a href="shop.html?category=lifestyle" class="category-card reveal reveal--delay-3">
+            <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80" alt="Lifestyle Department" class="category-card__image" loading="lazy" />
+            <div class="category-card__overlay">
+              <h3 class="category-card__title">Lifestyle</h3>
+              <span class="category-card__link-text">Explore Living Artifacts &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRENDING PRODUCTS -->
+    <section class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <span class="section-tag">Editorial Selection</span>
+            <h2 class="section-title">Trending Now</h2>
+            <p class="section-subtitle">The most coveted pieces across our design studios, recognized for exceptional materiality and craftsmanship.</p>
+          </div>
+          <a href="shop.html" class="btn btn--secondary">Explore All Products &rarr;</a>
+        </div>
+
+        <div class="product-grid" id="home-trending-grid">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED EDITORIAL SPLIT -->
+    <section class="container">
+      <div class="editorial-split reveal">
+        <div class="editorial-split__grid">
+          <div class="editorial-split__media">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80" alt="Editorial Fashion Collection NOVA" loading="lazy" />
+          </div>
+          <div class="editorial-split__content">
+            <span class="editorial-split__tag">Special Capsule &bull; Limited Run</span>
+            <h2 class="editorial-split__title">The Monochrome Architectural Series</h2>
+            <p class="editorial-split__desc">
+              Every curve, seam, and acoustic driver is calibrated to eliminate noise and reveal pure functional form. Sourced from heritage mills in Italy and Okayama, produced in conscious, limited quantities.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="shop.html?category=fashion" class="btn btn--accent btn--lg">Shop The Capsule</a>
+              <a href="product.html?id=nova-101" class="btn btn--secondary btn--lg" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3);">View Cashmere Coat</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY SHOP WITH US / VALUE PROPOSITIONS -->
+    <section class="container">
+      <div class="features-grid reveal">
+        <div class="feature-item">
+          <div class="feature-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+          </div>
+          <h4 class="feature-title">Complimentary Shipping</h4>
+          <p class="feature-desc">Fast, insured express courier delivery on all orders across India above ₹5,000.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4 class="feature-title">Secured Shopping</h4>
+          <p class="feature-desc">Seamless Cash on Delivery checkout with transparent end-to-end SMS & email tracking.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+          </div>
+          <h4 class="feature-title">30-Day Doorstep Returns</h4>
+          <p class="feature-desc">Zero hesitation. Complimentary reverse pickup from your doorstep if sizing is not ideal.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h4 class="feature-title">Dedicated Concierge</h4>
+          <p class="feature-desc">Our design advisory team is ready 7 days a week to advise on fit, specs, and styling.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="section" id="newsletter">
+      <div class="container">
+        <div class="newsletter-card reveal">
+          <span class="section-tag">Inner Circle</span>
+          <h2 class="section-title">Join The NOVA Collective</h2>
+          <p class="section-subtitle">
+            Subscribe for private preview access to limited product drops, private sales, and architectural design features. Receive 10% off your initial order.
+          </p>
+
+          <form class="newsletter-form" aria-label="Newsletter Subscription">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email Address" />
+            <button type="submit" class="btn btn--primary">Subscribe</button>
+          </form>
+
+          <span class="newsletter-fineprint">
+            We honor your privacy. Unsubscribe at any time with a single click.
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>NOVA<span class="header-logo__symbol"></span></h4>
+          <p class="footer-desc">
+            A premium digital atelier curating architectural apparel, high-precision electronics, and tactile everyday artifacts.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-btn" aria-label="X Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+            </a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener" class="social-btn" aria-label="Pinterest">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/><circle cx="12" cy="12" r="10"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h5>Departments</h5>
+          <ul class="footer-links-list">
+            <li><a href="shop.html?category=fashion">Fashion & Apparel</a></li>
+            <li><a href="shop.html?category=electronics">Audio & Electronics</a></li>
+            <li><a href="shop.html?category=accessories">Leather & Accessories</a></li>
+            <li><a href="shop.html?category=lifestyle">Living & Artifacts</a></li>
+            <li><a href="shop.html?badge=new">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Client Concierge</h5>
+          <ul class="footer-links-list">
+            <li><a href="account.html">Order Status & Tracking</a></li>
+            <li><a href="wishlist.html">Saved Wishlist</a></li>
+            <li><a href="cart.html">View Shopping Bag</a></li>
+            <li><a href="account.html">Account Settings</a></li>
+            <li><a href="shop.html?badge=sale">Seasonal Sale</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Our Atelier</h5>
+          <p style="font-size: 0.85rem; color: #9A9A98; margin-bottom: 0.75rem; line-height: 1.6;">
+            NOVA Studios India<br />
+            104 Indiranagar 100ft Road<br />
+            Bengaluru, Karnataka 560038
+          </p>
+          <p style="font-size: 0.85rem; color: #9A9A98;">
+            concierge@nova.studio<br />
+            +91 80 4099 8200
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 NOVA Studios Inc. All rights reserved. Crafted with Vanilla HTML5, CSS3, & JavaScript.</div>
+        <div class="footer-bottom-links">
+          <a href="shop.html">Terms of Service</a>
+          <a href="shop.html">Privacy Policy</a>
+          <a href="shop.html">Shipping Guidelines</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Populate Trending Products on Home Page
+    document.addEventListener('DOMContentLoaded', () => {
+      const trendingGrid = document.getElementById('home-trending-grid');
+      if (trendingGrid) {
+        const trending = getTrendingProducts(8);
+        trendingGrid.innerHTML = trending.map(p => createProductCardHTML(p)).join('');
+      }
+    });
+  </script>
+</body>
+</html>

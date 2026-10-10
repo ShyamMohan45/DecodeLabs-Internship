@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Express Checkout — NOVA E-Commerce</title>
+  <meta name="description" content="Secure checkout with simulated Cash on Delivery payment for prototype orders." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <div class="announcement-bar__text">
+        <span>🔒</span>
+        <span>Secure Demo Checkout &bull; No real payment information requested</span>
+      </div>
+      <div class="announcement-bar__links">
+        <a href="cart.html">&larr; Return to Bag</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="header-logo">NOVA<span class="header-logo__symbol"></span></a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="cart.html" class="nav-link">Shopping Bag</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="cart.html" class="header-action-btn" title="Return to Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          <span class="badge-counter header-cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="section--sm" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-light);">
+      <div class="container">
+        <nav class="breadcrumb-nav">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-separator">/</li>
+            <li class="breadcrumb-item"><a href="cart.html">Bag</a></li>
+            <li class="breadcrumb-separator">/</li>
+            <li class="breadcrumb-item is-current">Checkout</li>
+          </ol>
+        </nav>
+        <h1 style="font-size: clamp(1.75rem, 3.5vw, 2.5rem);">Express Checkout</h1>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <!-- Empty Cart Guard -->
+        <div class="empty-state" id="checkout-empty-guard" style="display: none; background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+          <div class="empty-state-icon">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          </div>
+          <h2 class="empty-state-title">Your shopping bag is empty</h2>
+          <p class="empty-state-desc">You need at least one piece in your bag to proceed with order confirmation.</p>
+          <a href="shop.html" class="btn btn--primary btn--lg" style="margin-top: 0.5rem;">Explore Catalog &rarr;</a>
+        </div>
+
+        <!-- Checkout Layout Grid -->
+        <div class="checkout-grid" id="checkout-layout">
+          <!-- Form Section -->
+          <div class="checkout-form-panel">
+            <form id="checkout-form" novalidate>
+              <!-- Section 1: Customer Contact -->
+              <div style="margin-bottom: 2.25rem;">
+                <div class="checkout-step-header">
+                  <span class="checkout-step-badge">1</span>
+                  <h3>Contact Information</h3>
+                </div>
+
+                <div class="checkout-form-grid">
+                  <div class="form-group full-span">
+                    <label class="form-label" for="checkout-name">Full Name *</label>
+                    <input type="text" id="checkout-name" class="form-input" placeholder="e.g. Arjun Verma" required />
+                    <span class="form-error">Please enter your complete legal name (min 3 characters).</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="checkout-email">Email Address (for order tracking) *</label>
+                    <input type="email" id="checkout-email" class="form-input" placeholder="arjun@example.com" required />
+                    <span class="form-error">Please provide a valid email address.</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="checkout-phone">Phone Number *</label>
+                    <input type="tel" id="checkout-phone" class="form-input" placeholder="+91 98765 43210" required />
+                    <span class="form-error">Please provide a valid 10-digit mobile number.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 2: Delivery Address -->
+              <div style="margin-bottom: 2.25rem;">
+                <div class="checkout-step-header">
+                  <span class="checkout-step-badge">2</span>
+                  <h3>Shipping Address</h3>
+                </div>
+
+                <div class="checkout-form-grid">
+                  <div class="form-group full-span">
+                    <label class="form-label" for="checkout-address">Street Address & Apartment *</label>
+                    <input type="text" id="checkout-address" class="form-input" placeholder="House / Flat No., Building Name, Street" required />
+                    <span class="form-error">Please enter your complete street address.</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="checkout-city">City *</label>
+                    <input type="text" id="checkout-city" class="form-input" placeholder="Bengaluru" required />
+                    <span class="form-error">Please enter your city.</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="checkout-state">State *</label>
+                    <input type="text" id="checkout-state" class="form-input" placeholder="Karnataka" required />
+                    <span class="form-error">Please enter your state.</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="checkout-postal">PIN / Postal Code *</label>
+                    <input type="text" id="checkout-postal" class="form-input" placeholder="560038" maxlength="6" required />
+                    <span class="form-error">Please enter a valid postal code.</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Country</label>
+                    <input type="text" class="form-input" value="India" disabled style="background: var(--bg-secondary); cursor: not-allowed;" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 3: Payment Method -->
+              <div style="margin-bottom: 2.25rem;">
+                <div class="checkout-step-header">
+                  <span class="checkout-step-badge">3</span>
+                  <h3>Payment Method</h3>
+                </div>
+
+                <div class="payment-method-card">
+                  <input type="radio" name="paymentMethod" id="pay-cod" value="cod" checked style="accent-color: var(--accent); margin-top: 0.25rem;" />
+                  <div>
+                    <label for="pay-cod" style="font-weight: 700; cursor: pointer; display: block; font-size: 0.95rem;">
+                      Cash on Delivery (Simulated Demo)
+                    </label>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
+                      Pay safely upon delivery at your doorstep via cash or UPI. Since this is an interactive portfolio prototype, no actual payment is collected.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn--primary btn--lg btn--block">
+                Confirm & Place Order &rarr;
+              </button>
+            </form>
+          </div>
+
+          <!-- Order Summary Sidebar -->
+          <aside class="order-summary-card">
+            <h3 class="summary-title">Summary Review</h3>
+
+            <!-- Review Items List -->
+            <div id="checkout-items-summary" style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; max-height: 380px; overflow-y: auto;">
+              <!-- Populated dynamically by checkout.js -->
+            </div>
+
+            <!-- Price Breakdown -->
+            <div class="summary-lines">
+              <div class="summary-line">
+                <span>Subtotal</span>
+                <span id="checkout-subtotal">₹0</span>
+              </div>
+              <div class="summary-line">
+                <span>Shipping</span>
+                <span id="checkout-shipping" style="color: var(--color-success); font-weight: 600;">FREE</span>
+              </div>
+              <div class="summary-divider"></div>
+              <div class="summary-line summary-line--total">
+                <span>Total Due</span>
+                <span id="checkout-total" class="summary-total-price">₹0</span>
+              </div>
+            </div>
+
+            <div class="summary-guarantee-note" style="margin-top: 1.5rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Instant order confirmation will be recorded in your demo dashboard.</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0; justify-content: center;">
+        <div>&copy; 2026 NOVA Studios Inc. All demo orders are stored locally in your browser.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

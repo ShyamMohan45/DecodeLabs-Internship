@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details — NOVA E-Commerce</title>
+  <meta name="description" content="View specifications, craftsmanship details, sizing, and pricing for our premium collection items." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <div class="announcement-bar__text">
+        <span>✨</span>
+        <span>Complimentary Express Shipping on all orders above <strong>₹5,000</strong></span>
+      </div>
+      <div class="announcement-bar__links">
+        <a href="shop.html?badge=sale">Mid-Season Sale: Up to 30% Off</a>
+        <a href="index.html#newsletter">Join Collective</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="header-logo">NOVA<span class="header-logo__symbol"></span></a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="shop.html?category=fashion" class="nav-link">Fashion</a>
+        <a href="shop.html?category=electronics" class="nav-link">Electronics</a>
+        <a href="shop.html?category=accessories" class="nav-link">Accessories</a>
+        <a href="shop.html?badge=new" class="nav-link">New Arrivals</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="header-action-btn header-search-trigger" aria-label="Search" title="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+
+        <a href="wishlist.html" class="header-action-btn" title="Saved Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <span class="badge-counter header-wishlist-count">0</span>
+        </a>
+
+        <a href="cart.html" class="header-action-btn" title="Shopping Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          <span class="badge-counter header-cart-count">0</span>
+        </a>
+
+        <a href="account.html" class="header-action-btn header-account-link" title="My Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+        </a>
+
+        <button type="button" class="header-action-btn mobile-menu-toggle" aria-label="Toggle Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-backdrop">
+    <aside class="mobile-drawer">
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="header-logo">NOVA<span class="header-logo__symbol"></span></a>
+        <button type="button" class="mobile-drawer-close">&times;</button>
+      </div>
+      <nav class="mobile-drawer-nav">
+        <a href="index.html" class="mobile-nav-link">Home <span>&rarr;</span></a>
+        <a href="shop.html" class="mobile-nav-link">All Products <span>&rarr;</span></a>
+        <a href="shop.html?category=fashion" class="mobile-nav-link">Fashion <span>&rarr;</span></a>
+        <a href="shop.html?category=electronics" class="mobile-nav-link">Electronics <span>&rarr;</span></a>
+        <a href="shop.html?category=accessories" class="mobile-nav-link">Accessories <span>&rarr;</span></a>
+        <a href="shop.html?category=lifestyle" class="mobile-nav-link">Lifestyle <span>&rarr;</span></a>
+      </nav>
+      <div class="mobile-drawer-footer">
+        <a href="account.html" class="btn btn--secondary btn--block">My Account</a>
+        <a href="cart.html" class="btn btn--primary btn--block">View Cart</a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Search Modal Overlay -->
+  <div class="search-modal-backdrop" role="dialog" aria-modal="true">
+    <div class="search-modal-container">
+      <div class="search-bar-header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="search" class="search-bar-input" placeholder="Search products..." autocomplete="off" />
+        <button type="button" class="search-modal-close">&times;</button>
+      </div>
+      <div class="search-results-list"></div>
+    </div>
+  </div>
+
+  <main>
+    <div class="section">
+      <div class="container" id="product-details-container">
+        <!-- Rendered dynamically by product.js -->
+        <div style="padding: 4rem; text-align: center; color: var(--text-muted);">
+          Loading product specifications...
+        </div>
+      </div>
+    </div>
+
+    <!-- RELATED PRODUCTS SECTION -->
+    <section class="section" style="background: var(--bg-secondary); border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-tag">Complementary Design</span>
+            <h2 class="section-title">You May Also Appreciate</h2>
+            <p class="section-subtitle">Curations sharing identical dedication to materials, acoustics, and form.</p>
+          </div>
+          <a href="shop.html" class="btn btn--secondary btn--sm">View Catalog &rarr;</a>
+        </div>
+
+        <div class="product-grid" id="related-products-grid">
+          <!-- Populated by product.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>NOVA<span class="header-logo__symbol"></span></h4>
+          <p class="footer-desc">
+            A premium digital atelier curating architectural apparel, high-precision electronics, and tactile everyday artifacts.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h5>Departments</h5>
+          <ul class="footer-links-list">
+            <li><a href="shop.html?category=fashion">Fashion & Apparel</a></li>
+            <li><a href="shop.html?category=electronics">Audio & Electronics</a></li>
+            <li><a href="shop.html?category=accessories">Leather & Accessories</a></li>
+            <li><a href="shop.html?category=lifestyle">Living & Artifacts</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Client Concierge</h5>
+          <ul class="footer-links-list">
+            <li><a href="account.html">Order Status</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="cart.html">Shopping Bag</a></li>
+            <li><a href="account.html">Account Details</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Customer Care</h5>
+          <p style="font-size: 0.85rem; color: #9A9A98; line-height: 1.6;">
+            Every piece is covered by our 30-day doorstep exchange and 2-year studio guarantee.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 NOVA Studios Inc. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="shop.html">Terms</a>
+          <a href="shop.html">Privacy</a>
+          <a href="shop.html">Shipping Guidelines</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop All Products — NOVA E-Commerce</title>
+  <meta name="description" content="Explore our complete catalogue of minimalist luxury fashion, high-fidelity acoustics, horology, and lifestyle essentials." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <div class="announcement-bar__text">
+        <span>✨</span>
+        <span>Free Express Delivery on all orders above <strong>₹5,000</strong></span>
+      </div>
+      <div class="announcement-bar__links">
+        <a href="shop.html?badge=sale">Mid-Season Sale: Up to 30% Off</a>
+        <a href="index.html#newsletter">Join Collective</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="header-logo">NOVA<span class="header-logo__symbol"></span></a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link is-active">Shop</a>
+        <a href="shop.html?category=fashion" class="nav-link">Fashion</a>
+        <a href="shop.html?category=electronics" class="nav-link">Electronics</a>
+        <a href="shop.html?category=accessories" class="nav-link">Accessories</a>
+        <a href="shop.html?badge=new" class="nav-link">New Arrivals</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="header-action-btn header-search-trigger" aria-label="Search" title="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+
+        <a href="wishlist.html" class="header-action-btn" title="Saved Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <span class="badge-counter header-wishlist-count">0</span>
+        </a>
+
+        <a href="cart.html" class="header-action-btn" title="Shopping Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          <span class="badge-counter header-cart-count">0</span>
+        </a>
+
+        <a href="account.html" class="header-action-btn header-account-link" title="My Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+        </a>
+
+        <button type="button" class="header-action-btn mobile-menu-toggle" aria-label="Toggle Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-backdrop">
+    <aside class="mobile-drawer">
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="header-logo">NOVA<span class="header-logo__symbol"></span></a>
+        <button type="button" class="mobile-drawer-close">&times;</button>
+      </div>
+      <nav class="mobile-drawer-nav">
+        <a href="index.html" class="mobile-nav-link">Home <span>&rarr;</span></a>
+        <a href="shop.html" class="mobile-nav-link">All Products <span>&rarr;</span></a>
+        <a href="shop.html?category=fashion" class="mobile-nav-link">Fashion <span>&rarr;</span></a>
+        <a href="shop.html?category=electronics" class="mobile-nav-link">Electronics <span>&rarr;</span></a>
+        <a href="shop.html?category=accessories" class="mobile-nav-link">Accessories <span>&rarr;</span></a>
+        <a href="shop.html?category=lifestyle" class="mobile-nav-link">Lifestyle <span>&rarr;</span></a>
+        <a href="shop.html?badge=new" class="mobile-nav-link">New Arrivals <span>&rarr;</span></a>
+      </nav>
+      <div class="mobile-drawer-footer">
+        <a href="account.html" class="btn btn--secondary btn--block">My Account</a>
+        <a href="cart.html" class="btn btn--primary btn--block">View Cart</a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Search Modal Overlay -->
+  <div class="search-modal-backdrop" role="dialog" aria-modal="true">
+    <div class="search-modal-container">
+      <div class="search-bar-header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="search" class="search-bar-input" placeholder="Search products..." autocomplete="off" />
+        <button type="button" class="search-modal-close">&times;</button>
+      </div>
+      <div class="search-results-list"></div>
+    </div>
+  </div>
+
+  <!-- Mobile Filter Drawer -->
+  <div class="mobile-filter-drawer-backdrop" id="shop-filter-drawer">
+    <aside class="mobile-filter-drawer">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-light);">
+        <h3 style="font-size: 1.15rem;">Filter Products</h3>
+        <button type="button" id="shop-filter-drawer-close" style="font-size: 1.75rem; line-height: 1;">&times;</button>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <div>
+          <h4 class="filter-group-title">Departments</h4>
+          <div class="filter-categories-list">
+            <button type="button" class="category-filter-btn" data-filter-category="all">All Items</button>
+            <button type="button" class="category-filter-btn" data-filter-category="fashion">Fashion & Apparel</button>
+            <button type="button" class="category-filter-btn" data-filter-category="electronics">Electronics & Audio</button>
+            <button type="button" class="category-filter-btn" data-filter-category="accessories">Accessories</button>
+            <button type="button" class="category-filter-btn" data-filter-category="lifestyle">Lifestyle & Living</button>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn--primary btn--block" id="shop-filter-drawer-apply" style="margin-top: 1rem;">
+          Apply Filters
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <main>
+    <!-- Catalog Header -->
+    <div class="section--sm" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-light);">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb-nav">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-separator">/</li>
+            <li class="breadcrumb-item is-current">Shop All</li>
+          </ol>
+        </nav>
+
+        <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem;">The Curated Catalog</h1>
+        <p style="max-width: 600px; color: var(--text-secondary);">
+          Explore our complete archive of limited-run garments, audiophile engineering, and artisanal homeware.
+        </p>
+      </div>
+    </div>
+
+    <!-- Catalog Body -->
+    <div class="section">
+      <div class="container">
+        <div class="shop-layout">
+          <!-- Desktop Sidebar Filters -->
+          <aside class="shop-sidebar" aria-label="Catalog Filters">
+            <!-- Search within catalog -->
+            <div>
+              <h4 class="filter-group-title">Search Catalog</h4>
+              <input type="text" id="shop-search-input" class="form-input" placeholder="Type keywords..." />
+            </div>
+
+            <!-- Categories -->
+            <div>
+              <h4 class="filter-group-title">Categories</h4>
+              <div class="filter-categories-list">
+                <button type="button" class="category-filter-btn is-active" data-filter-category="all">
+                  <span>All Curations</span>
+                </button>
+                <button type="button" class="category-filter-btn" data-filter-category="fashion">
+                  <span>Fashion</span>
+                </button>
+                <button type="button" class="category-filter-btn" data-filter-category="electronics">
+                  <span>Electronics</span>
+                </button>
+                <button type="button" class="category-filter-btn" data-filter-category="accessories">
+                  <span>Accessories</span>
+                </button>
+                <button type="button" class="category-filter-btn" data-filter-category="lifestyle">
+                  <span>Lifestyle</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Price Slider Filter -->
+            <div>
+              <h4 class="filter-group-title">Price Range</h4>
+              <div class="price-slider-wrap">
+                <input type="range" id="shop-price-slider" class="price-slider-input" min="1500" max="25000" step="500" value="25000" />
+                <div class="price-slider-labels">
+                  <span>₹1,500</span>
+                  <span id="shop-price-display" style="font-weight: 700; color: var(--text-primary);">₹25,000</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reset Filters -->
+            <button type="button" class="btn btn--secondary btn--sm btn--block" id="shop-clear-filters">
+              Clear All Filters
+            </button>
+          </aside>
+
+          <!-- Product Results Area -->
+          <div class="shop-content">
+            <!-- Toolbar -->
+            <div class="shop-toolbar">
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <button type="button" class="btn btn--secondary btn--sm shop-mobile-filter-trigger" id="shop-filter-drawer-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="21" x2="14" y1="4" y2="4"/><line x1="10" x2="3" y1="4" y2="4"/><line x1="21" x2="12" y1="12" y2="12"/><line x1="8" x2="3" y1="12" y2="12"/><line x1="21" x2="16" y1="20" y2="20"/><line x1="12" x2="3" y1="20" y2="20"/><line x1="14" x2="14" y1="2" y2="6"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="16" x2="16" y1="18" y2="22"/></svg>
+                  Filters
+                </button>
+                <span id="shop-results-count" style="font-size: 0.875rem; color: var(--text-secondary); font-weight: 500;">
+                  Showing 16 items
+                </span>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <label for="shop-sort-select" style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Sort by:</label>
+                <select id="shop-sort-select" class="form-select" style="width: auto; padding: 0.45rem 0.85rem; font-size: 0.85rem;">
+                  <option value="featured">Featured Curations</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="rating">Highest Rated</option>
+                  <option value="name-asc">Alphabetical (A - Z)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Empty Search State -->
+            <div class="empty-state" id="shop-empty-state" style="display: none; background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+              <div class="empty-state-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              </div>
+              <h3 class="empty-state-title">No products match your criteria</h3>
+              <p class="empty-state-desc">Try clearing your category filter or adjusting your price limit to find what you are looking for.</p>
+              <button type="button" class="btn btn--primary" onclick="document.getElementById('shop-clear-filters').click();">Reset Filters</button>
+            </div>
+
+            <!-- Grid of Products -->
+            <div class="product-grid" id="shop-product-grid">
+              <!-- Dynamically populated by shop.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>NOVA<span class="header-logo__symbol"></span></h4>
+          <p class="footer-desc">
+            A premium digital atelier curating architectural apparel, high-precision electronics, and tactile everyday artifacts.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h5>Departments</h5>
+          <ul class="footer-links-list">
+            <li><a href="shop.html?category=fashion">Fashion & Apparel</a></li>
+            <li><a href="shop.html?category=electronics">Audio & Electronics</a></li>
+            <li><a href="shop.html?category=accessories">Leather & Accessories</a></li>
+            <li><a href="shop.html?category=lifestyle">Living & Artifacts</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Client Concierge</h5>
+          <ul class="footer-links-list">
+            <li><a href="account.html">Order Status</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="cart.html">Shopping Bag</a></li>
+            <li><a href="account.html">Profile Settings</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Customer Care</h5>
+          <p style="font-size: 0.85rem; color: #9A9A98; line-height: 1.6;">
+            Complimentary doorstep returns within 30 days. Contact concierge@nova.studio for bespoke styling advice.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 NOVA Studios Inc. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="shop.html">Terms</a>
+          <a href="shop.html">Privacy</a>
+          <a href="shop.html">Delivery Information</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>
